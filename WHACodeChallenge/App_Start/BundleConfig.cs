@@ -26,6 +26,17 @@ namespace WHACodeChallenge
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/site.css"));
+
+            bundles.Add(new ScriptBundle("~/bundles/whachallenge").Include(
+                "~/Scripts/angular.js",
+                "~/Scripts/angular-animate.js",
+                "~/Scripts/angular-ui/ui-bootstrap-tpls.js",
+                "~/Scripts/angular-file-upload.min.js",
+
+                "~/Scripts/whachallenge/core/core.module.js",
+                "~/Scripts/whachallenge/bets/bets.module.js",
+                "~/Scripts/whachallenge/bets/bets.js"
+                ));
         }
     }
 }

@@ -30,12 +30,16 @@
         };
         $scope.processFile = function () {
             console.info('ProcessFile', uploadeFileName, $scope.data);
-            betsService
-                .processFile({ fileURL: uploadeFileName, betType: $scope.data.betType })
-                .then(function () {
-                    $scope.checkStatus();
-                    $scope.fileUploaded = false;
-                });
+            if ($scope.data.betType != null) {
+                betsService
+                    .processFile({ fileURL: uploadeFileName, betType: $scope.data.betType })
+                    .then(function () {
+                        $scope.checkStatus();
+                        $scope.fileUploaded = false;
+                    });
+            } else {
+                alert('Select a bet type');
+            }
         };
         $scope.totalSettledBets = 0;
         $scope.totalUnsettledBets = 0;

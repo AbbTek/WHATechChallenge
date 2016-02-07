@@ -6,6 +6,9 @@
         <div class="col-md-6">
             <h2>Upload Bets</h2>
             <input type="file" nv-file-select uploader="uploader" />
+            <span class="label label-info">CSV files only. Five numeric columns (Customer, Event, Participant, Stake, Win)</span>
+            <span class="label label-info">The new file will override the previous one.</span>
+            <br />
             <div ng-show="fileUploaded">
                 <select name="typeBet" ng-model="data.betType">
                     <option value="1">Settled</option>

@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WHACodeChallenge", "WHACodeChallenge\WHACodeChallenge.csproj", "{9C2F2535-CB55-407B-BF5C-1A29F2F61EF2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WHACodeChallenge.Tests", "WHACodeChallenge.Tests\WHACodeChallenge.Tests.csproj", "{D1C1DF42-7401-444C-A8D3-1723B6A1ACC8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WHA.Core", "WHA.Core\WHA.Core.csproj", "{BC6B8C5D-CA90-4DD4-A030-91BC1A447DB6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9C2F2535-CB55-407B-BF5C-1A29F2F61EF2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C2F2535-CB55-407B-BF5C-1A29F2F61EF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C2F2535-CB55-407B-BF5C-1A29F2F61EF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C2F2535-CB55-407B-BF5C-1A29F2F61EF2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D1C1DF42-7401-444C-A8D3-1723B6A1ACC8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1C1DF42-7401-444C-A8D3-1723B6A1ACC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1C1DF42-7401-444C-A8D3-1723B6A1ACC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1C1DF42-7401-444C-A8D3-1723B6A1ACC8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC6B8C5D-CA90-4DD4-A030-91BC1A447DB6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC6B8C5D-CA90-4DD4-A030-91BC1A447DB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC6B8C5D-CA90-4DD4-A030-91BC1A447DB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC6B8C5D-CA90-4DD4-A030-91BC1A447DB6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -22,6 +22,7 @@
             uploadeFileName = response;
             $scope.fileUploaded = true;
         };
+
         $scope.fileUploaded = false;
         $scope.data = {
             betType: null,
@@ -29,7 +30,61 @@
         };
         $scope.processFile = function () {
             console.info('ProcessFile', uploadeFileName, $scope.data);
-            betsService.processFile({ fileURL: uploadeFileName, betType: $scope.data.betType });
+            betsService
+                .processFile({ fileURL: uploadeFileName, betType: $scope.data.betType })
+                .then(function () {
+                    $scope.checkStatus();
+                    $scope.fileUploaded = false;
+                });
         };
+        $scope.totalSettledBets = 0;
+        $scope.totalUnsettledBets = 0;
+
+        $scope.checkStatus = function () {
+            betsService.getStatus().then(function (response) {
+                $scope.totalSettledBets = response.data.TotalSettledBets;
+                $scope.totalUnsettledBets = response.data.TotalUnsettledBets;
+            });
+        };
+
+        $scope.historicsCustomers = [];
+        $scope.showHistoric = false;
+
+        $scope.showCustomersWithWinnings = function () {
+            betsService.getCustomersAccordingWinnings(60).then(function (response) {
+                $scope.historicsCustomers = response.data;
+                $scope.showHistoric = true;
+                $scope.showUnsettled = false;
+            });
+        };
+
+        $scope.unsettledBets = [];
+        $scope.showUnsettled = false;
+
+        $scope.showUnsettledBetsFromWinners = function () {
+            betsService.getUnsettledFromWinners().then(function (response) {
+                $scope.unsettledBets = response.data;
+                $scope.showHistoric = false;
+                $scope.showUnsettled = true;
+            });
+        };
+
+        $scope.showUnsettledOver = function (times) {
+            betsService.getUnsettledOver(times).then(function (response) {
+                $scope.unsettledBets = response.data;
+                $scope.showHistoric = false;
+                $scope.showUnsettled = true;
+            });
+        };
+
+        $scope.showUnsettledWouldWinOver = function (toWin) {
+            betsService.getUnsettledWouldWinOver(toWin).then(function (response) {
+                $scope.unsettledBets = response.data;
+                $scope.showHistoric = false;
+                $scope.showUnsettled = true;
+            });
+        };
+
+        $scope.checkStatus();
     } 
 })();

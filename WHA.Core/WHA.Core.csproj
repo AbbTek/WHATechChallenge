@@ -45,6 +45,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Business\BetSettledAnalyser.cs" />
+    <Compile Include="Business\BusinessException.cs" />
     <Compile Include="Business\CsvFilelUtil.cs" />
     <Compile Include="Domain\Bet.cs" />
     <Compile Include="Domain\BetType.cs" />

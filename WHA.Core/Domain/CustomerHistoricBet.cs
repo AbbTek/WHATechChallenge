@@ -14,5 +14,20 @@ namespace WHA.Core.Domain
         public int Bets { get; set; }
         public double TotalStaked { get; set; }
         public double TotalWon { get; set; }
+
+        public double AverageStaked {
+            get
+            {
+                return TotalStaked / Bets;
+            }
+        }
+
+        public double TotalWonPercentege
+        {
+            get
+            {
+                return 100 * (TotalWon / TotalStaked - 1);
+            }
+        }
     }
 }

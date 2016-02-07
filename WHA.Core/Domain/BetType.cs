@@ -8,7 +8,7 @@ namespace WHA.Core.Domain
 {
     public enum BetType
     {
-        Settled,
+        Settled = 1,
         Unsettled
     }
 }

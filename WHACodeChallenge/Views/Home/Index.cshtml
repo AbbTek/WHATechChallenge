@@ -3,16 +3,13 @@
 }
 
 <div ng-controller="betsController">
-    <h2>Upload settled bets</h2>
+    <h2>Upload file</h2>
     <input type="file" nv-file-select uploader="uploader" />
-    <br />
-    <ul>
-        <li ng-repeat="item in uploader.queue">
-            Name: <span ng-bind="item.file.name"></span><br />
-            <button ng-click="item.upload()">upload</button>
-        </li>
-    </ul>
-    @*<button type="button" class="btn btn-xs" ng-click="test()">
-        <i class="glyphicon glyphicon-remove" tooltip="Test" tooltip-placement="right"></i>
-    </button>*@
+    <div ng-show="fileUploaded">
+        <select name="typeBet" ng-model="data.betType">
+            <option value="1">Settled</option>
+            <option value="2">Unsettled</option>
+        </select>
+        <button class="btn btn-primary" type="button" ng-click="processFile()">Process File</button>
+    </div>
 </div>

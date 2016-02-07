@@ -34,6 +34,7 @@ namespace WHACodeChallenge
                 "~/Scripts/angular-file-upload.min.js",
 
                 "~/Scripts/whachallenge/core/core.module.js",
+                "~/Scripts/whachallenge/core/dataService.js",
                 "~/Scripts/whachallenge/bets/bets.module.js",
                 "~/Scripts/whachallenge/bets/bets.js"
                 ));

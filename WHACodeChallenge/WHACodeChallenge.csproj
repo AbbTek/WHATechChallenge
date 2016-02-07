@@ -205,6 +205,8 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\Api\BetsController.cs" />
+    <Compile Include="Controllers\Api\Messages\ProcessFile.cs" />
     <Compile Include="Controllers\FileUploadController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
@@ -267,6 +269,7 @@
     <Content Include="Scripts\whachallenge\bets\bets.js" />
     <Content Include="Scripts\whachallenge\bets\bets.module.js" />
     <Content Include="Scripts\whachallenge\core\core.module.js" />
+    <Content Include="Scripts\whachallenge\core\dataService.js" />
     <Content Include="Scripts\_references.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">

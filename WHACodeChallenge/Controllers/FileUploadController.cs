@@ -24,6 +24,8 @@ namespace WHACodeChallenge.Controllers
                 path.Directory.Create();
 
             file.SaveAs(path.FullName);
+
+
             return new ContentResult
             {
                 ContentType = "text/plain",

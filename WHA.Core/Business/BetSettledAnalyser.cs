@@ -9,7 +9,8 @@ namespace WHA.Core.Business
 {
     public class BetSettledAnalyser
     {
-        public static IList<CustomerHistoricBet> GetHistoricBets(IList<Bet> bets) {
+        public static IList<CustomerHistoricBet> GetHistoricBets(IList<Bet> bets)
+        {
             var result = (from b in bets
                          where b.Type == BetType.Settled
                          group b by b.CustomerID into g
